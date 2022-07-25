@@ -7,16 +7,19 @@ import WorldClock from "./WorldClock/WorldClock";
 import Stopwatch from "./Stopwatch/Stopwatch";
 
 function Clock(){
-    const [selectedOption , changeSelectedOption] = useState(2);
+    const [selectedOption , changeSelectedOption] = useState(0);
     return (<>
         <div className="clockContainer">
             <div className="displayArea">
                 {selectedOption === 0 && (<Alarm />)}
-                {selectedOption === 1 && (<Countdown />)}
-                {selectedOption === 2 && (<Stopwatch />)}
+                {selectedOption === 1 && (<Stopwatch />)}
+                {selectedOption === 2 && (<Countdown />)}
                 {selectedOption === 3 && (<WorldClock />)}
             </div>
-            <Footer />
+            <Footer 
+            selectedTab = {selectedOption}
+            selectScreen = {(screen)=>{changeSelectedOption(screen)}}
+            />
         </div>
 
     </>);
