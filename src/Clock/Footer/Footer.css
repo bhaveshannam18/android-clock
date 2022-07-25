@@ -1,0 +1,6 @@
+.footerContainer{
+    display: flex;
+    justify-content: space-around;
+    background-color: blanchedalmond;
+    height: 10%;
+}

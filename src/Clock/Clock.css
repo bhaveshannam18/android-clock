@@ -1,0 +1,10 @@
+.clockContainer{
+    height: 100vh;
+    width: 100vw;
+}
+
+.displayArea{
+    height: 90%;
+    width: 100%;
+    background-color:azure;
+}
